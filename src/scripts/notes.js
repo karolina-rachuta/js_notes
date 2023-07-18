@@ -226,8 +226,18 @@
 //     console.log(max([1, 2, 3, 4, 5, 2, 42]));
 
 // function max(arr) {
-//     let maxValue = collection[0];
-//     for (const digit of collection)
+//     let maxValue = arr[i];
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 1; j<= arr.length; j++) {
+//             if (arr[i] > arr[j]) {
+//                 return arr[i];
+//             } else if ( arr[i] < arr[j]) {
+//                 return arr[j];
+//         }
+//     }
+// return maxValue
+// }function max(arr) {
+//     let maxValue = arr[i];
 //     for (let i = 0; i < arr.length; i++) {
 //         for (let j = 1; j<= arr.length; j++) {
 //             if (arr[i] > arr[j]) {
@@ -238,6 +248,7 @@
 //     }
 // return maxValue
 // }
+// console.log(max([1, 2, 3, 4, 5, 2, 42]));
 
 //  napisz funckje ktora zwraca nazwy dni tygodnia na podstawie liczby, 1 = Sunday, 7 - Saturday
 
@@ -273,7 +284,7 @@
 //     if (dayIndex < 0 || dayIndex > 7) throw new Error("Invalid index day");
 //    return ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 // }
-//
+
 // const getDayName = (dayIndex) => {
 //     const days = ["Sunday", "Monday", ];
 //     return days[dayIndex - 1];
@@ -284,13 +295,14 @@
 
 // policz srednia elementow z tablicy
 
-function calculateAvg(numbers){
-    let sum = 0;
-    for(const number of numbers){
-       sum += number;
-    }
-    return sum / numbers.length;
+// function calculateAvg(numbers){
+//     let sum = 0;
+//     for(const number of numbers){
+//        sum += number;
+//     }
+//     return sum / numbers.length;
+//
+// }
+//
+// console.log(calculateAvg([1, 2, 3, 4, 5]));
 
-}
-
-console.log(calculateAvg([1, 2, 3, 4, 5]));
