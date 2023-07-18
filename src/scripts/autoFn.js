@@ -177,7 +177,7 @@ class Auto {
 }
 
 const bmw = new Auto("bmw", 140);
-// const mercedes = new Auto("mercedes", 190);
+const mercedes = new Auto("mercedes", 190);
 
 bmw.speedUp(200);
 bmw.startEngine();

@@ -144,15 +144,54 @@ const u5 = new User1('Zbigniew');
 
 // syntactic sugar = lukier składniowy
 // zamiast prototype używa się class
+//
+// class User1 {
+//     constructor(name) {
+//         this.name = name;
+//         this.score = 0;
+//     }
+//     updateScore(newScore) {
+//         this.score += newScore;
+//     }
+// }
+//
+// const u5 = new User1("Zbigniew");
 
-class User1 {
-    constructor(name) {
-        this.name = name;
-        this.score = 0;
+// this mozna manipulowac
+
+// function magic () {
+//     console.log(this);
+// }
+// magic();
+
+// const context = {
+//     a:1, b:2
+// }
+// magic.call(context);
+// magic.apply(context);
+// const magic2 = magic;
+// // w consoli this to kest windows, jesli damy "use strict" to wtedy jest undefined
+//
+
+const h1Ref = document.querySelector("#title");
+
+class Magic {
+    constructor() {
+        this.counter = 0;
     }
-    updateScore(newScore) {
-        this.score += newScore;
+
+
+    click() {
+        // h1Ref.addEventListener("click", function (){
+        //     this.counter++;
+        //     console.log(this.counter);
+        // }).bind(this))
+        h1Ref.addEventListener("click", () => {
+                this.counter++;
+                console.log(this.counter);
+            })
     }
 }
 
-const u5 = new User1("Zbigniew");
+const m = new Magic ();
+m.click();
