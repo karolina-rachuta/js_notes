@@ -159,39 +159,75 @@ const u5 = new User1('Zbigniew');
 
 // this mozna manipulowac
 
-// function magic () {
+
+
+// function magic(data) {
+//     this.data = data;
 //     console.log(this);
 // }
-// magic();
-
-// const context = {
-//     a:1, b:2
-// }
-// magic.call(context);
-// magic.apply(context);
-// const magic2 = magic;
-// // w consoli this to kest windows, jesli damy "use strict" to wtedy jest undefined
 //
+// const context = {
+//     a: 1, b: 2
+// }
+//
+// magic.call(context, "ala ma kota");
+// magic.apply(context, ["ala ma kota i ejc"]);
+// const magic2 = magic.bind(context);
+// magic2()
 
-const h1Ref = document.querySelector("#title");
+
+// function magic(data) {
+//     this.data = data;
+//     console.log(this);
+// }
+//
+// const context = {
+//     a: 1, b: 2
+// }
+//
+// magic.call(context, "ala ma kota");
+// magic.apply(context, ["ala ma kota i ejc"]);
+// const magic2 = magic.bind(context);
+// magic2()
+
+
+
+
+
+
+const h1Ref = document.querySelector('#title');
 
 class Magic {
     constructor() {
         this.counter = 0;
     }
 
-
     click() {
-        // h1Ref.addEventListener("click", function (){
-        //     this.counter++;
+        /// this - object klasy Magic
+
+        ///
+
+        ///this - object klasy Magic
+        // h1Ref.addEventListener('click', (function () {
+        //     this.counter++; // wskazuje na obiekt h1Ref -> dot notation
         //     console.log(this.counter);
         // }).bind(this))
-        h1Ref.addEventListener("click", () => {
-                this.counter++;
-                console.log(this.counter);
-            })
+
+        /// this - object klasy Magic
+
+        // janusze programowania
+        // const that = this;
+        //  h1Ref.addEventListener('click', (function () {
+        //     that.counter++; // wskazuje na obiekt h1Ref -> dot notation
+        //     console.log(that.counter);
+        // }))
+
+        h1Ref.addEventListener('click', () => {
+            this.counter++; // wskazuje na obiekt h1Ref -> dot notation
+            console.log(this.counter);
+        })
     }
 }
 
-const m = new Magic ();
-m.click();
+const m = new Magic();
+m.click()
