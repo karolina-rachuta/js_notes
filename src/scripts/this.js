@@ -47,6 +47,7 @@ String.prototype.capitalize = function () {
 
 
 // dupa debugging - pisze w wielu miejscach console.log('dupa') i patrze gdzie się pojawi
+
 Array.prototype.myMap = function (cb) {
     const temp = [];
 

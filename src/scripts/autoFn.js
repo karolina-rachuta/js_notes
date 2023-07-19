@@ -66,18 +66,18 @@
 //
 // }
 //
-// speedUp(auto, 200);
-// startEngine(auto);
-// speedUp(auto, 40);
-// speedUp(auto, 40);
-// speedUp(auto, 240);
-// stopEngine(auto);
-// slowDown(auto, 50);
-// slowDown(auto, 250);
-// stopEngine(auto);
+// speedUp(bmw, 200);
+// startEngine(bmw);
+// speedUp(bmw, 40);
+// speedUp(bmw, 40);
+// speedUp(bmw, 240);
+// stopEngine(bmw);
+// slowDown(bmw, 50);
+// slowDown(bmw, 250);
+// stopEngine(bmw);
 //
 //
-//  // stara metoda:
+//  // stara metoda z constructor function:
 //
 // function Auto (brand, maxSpeed) {
 //     this.brand = brand;
@@ -136,6 +136,7 @@
 // bmw.stopEngine();
 //
 
+// KLASA - specjalna konstrukcja tworzenia obiektów
 class Auto {
     constructor(brand, maxSpeed) {
         this.brand = brand;
